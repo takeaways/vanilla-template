@@ -1,9 +1,11 @@
 import './style.css'
 
+import App from "./app/app";
+import TopSection from './components/sections/topSection';
+import CustomerSection from "./components/sections/customerSection"
+import TeamSection from "./components/sections/teamSection";
+import FormSection from "./components/sections/formSection"
 
-document.querySelectorAll('.story-btn').forEach((btnElement)=>{
-  btnElement.addEventListener('click', ()=>{
-    btnElement.classList.toggle('change');
-    btnElement.nextElementSibling?.classList.toggle('change');
-  })
-})
+
+App.render(document.body);
+App.attach(TopSection, CustomerSection, TeamSection,FormSection);
